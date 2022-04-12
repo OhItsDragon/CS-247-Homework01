@@ -1,0 +1,40 @@
+// Place your DOM creation code here
+var main = document.createElement('main');
+var section = document.createElement('section');
+document.body.appendChild(main);
+main.appendChild(section);
+
+var h1 = document.createElement('h1');
+var h1Text = document.createTextNode('Homework 01');
+var p = document.createElement('p');
+var p1Text = document.createTextNode('For this homework, I want you to recreate this HTML page using JavaScript and the DOM API. This means, the HTML should have a blank body and minimal head. Once the page loads, use JavaScript to recreate all the elements from the original page.');
+var p2 = document.createElement('p');
+var p2Text = document.createTextNode("To make it fun, and maybe a bit tricky, I've added several types of elements. Some elements are pretty simple like these ");
+var code = document.createElement('code');
+var codeText = document.createTextNode('<p>');
+section.appendChild(h1);
+h1.appendChild(h1Text);
+section.appendChild(p);
+p.appendChild(p1Text);
+section.append(p2);
+p2.appendChild(p2Text);
+p2.appendChild(code);
+code.appendChild(codeText);
+p2Text = document.createTextNode(" tags. Others are more going to require extra attributes or mixing text nodes with element nodes.");
+p2.appendChild(p2Text); 
+
+var aside = document.createElement('aside');
+var img = document.createElement('img');
+var quote = document.createElement('blockquote');
+var quoteText = document.createTextNode('Mario says "Wahoo!" to homework');
+var audio = document.createElement('audio');
+document.body.appendChild(aside);
+aside.appendChild(img);
+document.getElementsByTagName('img');
+img.setAttribute('src', 'assets/mario.png');
+aside.appendChild(quote);
+quote.appendChild(quoteText);
+aside.appendChild(audio);
+audio.setAttribute('controls', 'true');
+audio.setAttribute('autoplay', 'false');
+audio.setAttribute('src', 'assets/Super Mario Bros. medley.mp3');
